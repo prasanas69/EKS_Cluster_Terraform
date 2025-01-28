@@ -7,18 +7,18 @@ terraform {
   }
  # Adding Backend as S3 for Remote State Storage
   backend "s3" {
-    bucket = "ajithvgs"
+    bucket = "kops-jan-25"
     key    = "vgs/terraform.tfstate"
-    region = "us-east-1"   
+    region = "ap-south-1"   
   }
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = "ap-south-1"
 }
 
 locals {
-  region = "us-east-1"
+  region = "ap-south-1"
   name = "vgs_cluster"
   vpc_cidr = "10.123.0.0/16"
   azs      = ["us-east-1a", "us-east-1b"]
